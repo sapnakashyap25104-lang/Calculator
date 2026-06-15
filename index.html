@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using HTML,CSS & JS</title>
+    <style>
+        #clear{
+            width: 380px;
+        }
+
+        .formstyle{
+            width: 390px;
+            height: 500px;
+            margin: auto;
+            border: 2px solid black;
+        }
+        
+        input{
+            width: 110px;
+        }
+
+        #answerstyle{
+            width: 380px;
+        }
+        .forms input[type="button"] {
+    width: 110px;      
+    height: 45px;
+    font-size: 20px;
+    margin: 4px;
+    box-sizing: border-box;
+}
+
+.forms input[type="text"] {
+    width: 380px;      
+    height: 35px;
+    font-size: 20px;
+}
+.formstyle {
+    width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #978f80;
+    border: 1px solid #0f0f0f;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.forms input[type="text"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 12px;
+    padding: 0 10px;
+    font-size: 20px;
+    text-align: right;
+    color: #2C2C2A;
+    background-color: #FFFFFF;
+    border: 1px solid #070707;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.forms input[type="button"] {
+    width: 100px;
+    height: 45px;
+    margin: 4px;
+    font-size: 18px;
+    color: #2C2C2A;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.15s ease;
+}
+
+.forms input[type="button"]:hover {
+    background-color: #FBE9DD;
+}
+
+.forms input[value=" + "],
+.forms input[value=" - "],
+.forms input[value=" * "],
+.forms input[value=" / "] {
+    color: #050505;
+    background-color: #e4bac0;
+    font-weight: bold;
+}
+
+.forms input[value=" + "]:hover,
+.forms input[value=" - "]:hover,
+.forms input[value=" * "]:hover,
+.forms input[value=" / "]:hover {
+    background-color: rgb(247, 195, 240);
+}
+
+/* Equals button */
+.forms input[value=" = "] {
+    color: #FFFFFF;
+    background-color: #e4bac0;
+    font-weight: bold;
+}
+
+.forms input[value=" = "]:hover {
+    background-color: #f0c3d2;
+}
+
+/* Clear all button */
+.forms input[value="clear all"] {
+    width: 100%;
+    margin-top: 8px;
+    color: #d8689c;
+    background-color:#f0c3d2;
+    font-weight: bold;
+}
+
+.forms input[value="Clear All"]:hover {
+    background-color: #eeb2d7;
+}
+    </style>
+</head>
+<body>
+    <div class="formstyle">
+        <form class="forms" name="forms"> 
+            <input type="text" name="answer" id="answerstyle"> <br> <br>
+            <input type="button" value=" 1 " onclick="forms.answer.value += '1' ">
+            <input type="button" value=" 2 " onclick="forms.answer.value  += '2' ">
+            <input type="button" value=" 3 " onclick="forms.answer.value  += '3' ">
+
+            <br> <br>
+            <input type="button" value=" 4 " onclick="forms.answer.value += '4' ">
+            <input type="button" value=" 5 " onclick="forms.answer.value += '5' ">
+            <input type="button" value=" 6 " onclick="forms.answer.value += '6' ">
+
+            <br><br>
+            <input type="button" value=" 7 " onclick="forms.answer.value += '7' ">
+            <input type="button" value=" 8 " onclick="forms.answer.value += '8' ">
+            <input type="button" value=" 9 " onclick="forms.answer.value += '9' ">
+            
+            <br> <br>
+            <input type="button" value=" + " onclick="forms.answer.value += '+' ">
+            <input type="button" value=" - " onclick="forms.answer.value += '-' ">
+            <input type="button" value=" * " onclick="forms.answer.value += '*' ">
+
+            <br> <br>
+            <input type="button" value=" / " onclick="forms.answer.value += '/' ">
+            <input type="button" value=" 0 " onclick="forms.answer.value += '0' ">
+            <input type="button" value=" = " onclick="forms.answer.value = eval(forms.answer.value) ">
+
+            <br> <br>
+            <input type="button" value="Clear All" onclick="forms.answer.value = ''" id="clear">
+            
+        </form>
+
+    </div>
+</body>
+</html>
